@@ -1,0 +1,12 @@
+/* pages/all/all.wxss */
+.header {
+  width: 100%;
+  background-color: #1296db;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.header-search {
+  background-color: #fff;
+  border-radius: 30rpx;
+  padding-left: 20rpx;
+}

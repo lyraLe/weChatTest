@@ -1,0 +1,26 @@
+/* pages/comment/comment.wxss */
+.comment-container {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.comment-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.comment-title image{
+  width: 40rpx;
+  height: 40rpx;
+}
+textarea {
+  width:100%;
+  border: 1px solid #eee;
+}
+.uploadFile {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 1px solid #eee;
+  text-align: center;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,12 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+}
+.left-title {
+  border-left: 6px solid #1296db;
+  padding-left: 8px;
+  height: 16px;
+  line-height: 16px;
+}

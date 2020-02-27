@@ -1,0 +1,15 @@
+<!--pages/comment/comment.wxml-->
+<view class="comment-container">
+  <view class="comment-title">
+    <text> 评论</text>
+    <view>
+      <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="i" wx:key="*this">
+        <image data-index="{{i}}" bindtap="tapStar" src="{{i <= stars ? '/images/star.png' : '/images/star2.png'}}"></image>
+      </block>
+    </view>
+  </view>
+  <textarea bindinput="onInput"></textarea>
+  <image src="{{imgUrl}}" wx:if="{{imgUrl}}"></image>
+  <view wx:else bindtap="upload" class="uploadFile">+</view>
+  <button bindtap="submit" type="warn">保存提交</button>
+</view>

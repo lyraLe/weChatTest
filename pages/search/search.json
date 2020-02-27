@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "idot-cmp": "/components/idot/idot"
+  },
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

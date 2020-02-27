@@ -1,0 +1,13 @@
+function formatTime(time) {
+  var date = getDate(time);
+  return date.getFullYear() + '-' + padStart(date.getMonth()) + "-" + padStart(date.getDay())
+}
+function padStart(str) {
+  if(str < 10) {
+    return "0" + str
+  }
+  return str;
+}
+module.exports = {
+  formatTime: formatTime
+}

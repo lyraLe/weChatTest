@@ -1,0 +1,13 @@
+/* components/idot/idot.wxss */
+.idot-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 355rpx;
+  margin: 10rpx;
+  box-shadow: 5px 5px 5px #ddd;
+}
+image {
+  width: 100%
+}

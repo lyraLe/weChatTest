@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<swiper>
+  <swiper-item>
+    <image src="/images/index.jpg"></image>
+  </swiper-item>
+</swiper>
+<view class="nav-title">
+  <text class="left-title">最新美图</text>
+  <navigator url="/pages/all/all">
+    <text>全部图片</text>
+    <image class="arrow" src="/images/arrow.png"></image>
+  </navigator>
+</view>
+<view class="container">
+  <idot-cmp bindmyEvent="onMyEvent" item="{{item}}" wx:for="{{idots}}" wx:key="id"></idot-cmp>
+</view>

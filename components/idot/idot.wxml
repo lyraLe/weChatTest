@@ -1,0 +1,10 @@
+<!--components/idot/idot.wxml-->
+  <view class="idot-item" catchtap="onTap">
+    <image mode="widthFix" class="idot-image" src="{{item.url}}"></image>
+    <text>{{item.id}}</text>
+    <star-cmp star="{{item.star}}">
+      <text slot="first">{{item.starTitle}}</text>
+      <text slot="second">{{item.star * 20}}</text>
+    </star-cmp>
+  </view>
+ 

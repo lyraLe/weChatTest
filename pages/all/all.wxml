@@ -1,0 +1,9 @@
+<!--pages/all/all.wxml-->
+<view class="header">
+  <navigator url="/pages/search/search" class="header-search">
+    <icon type="search" size="18"></icon>
+  </navigator> 
+</view>
+<view class="container">
+  <idot-cmp wx:for="{{allImages}}" wx:key="id" item="{{item}}"></idot-cmp>
+</view>

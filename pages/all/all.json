@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "idot-cmp": "/components/idot/idot"
+  }
+}

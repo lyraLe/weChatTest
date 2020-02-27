@@ -1,0 +1,59 @@
+/* pages/detail/detail.wxss */
+page {
+  background-color: #f5f5f5;
+}
+.container {
+  padding: 0 20rpx 100rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.article-content {
+  margin: 20rpx 0 ;
+  font-size: 14px;
+}
+.footer {
+  display: flex;
+  position: fixed; 
+  width: 100%;
+  bottom: 0;
+  height: 100rpx;
+  background-color: #fff;
+}
+.btn, .btn::after{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 200;
+  /** 清除button原有样式**/
+  padding: 0;
+  border: 0;
+  content: none;
+}
+.text {
+  font-size: 12px;
+}
+.btn image {
+  width: 40rpx;
+  height: 40rpx;
+}
+/**其他*/
+.other-modal {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background-color: #fff;
+  width: 100%;
+}
+.other-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+}
+.other-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  border: 2px solid violet;
+}

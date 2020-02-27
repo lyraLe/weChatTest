@@ -1,0 +1,37 @@
+<!--pages/search/search.wxml-->
+<view class="search-header">
+  <view class="search-input">
+    <icon size="18" class="search-icon" type="search"></icon>
+    <input value="{{keyword}}" bindconfirm="onConfirm" bindinput="changeInput" placeholder="搜索" focus="true" confirm-type="search" />
+    <icon bindtap="onClear" size="18" class="search-icon" color="#ddd" type="cancel"></icon>
+  </view>
+  <text bindtap="cancelBack" class="search-cancel">取消</text>
+</view>
+<view wx:if="{{!showSearchResult}}">
+  <view class="search-box">
+    <view class="left-title">热门搜索</view>
+    <view class="search-content">
+      <text data-info="{{item}}" bindtap="onConfirm" wx:for="{{hotSearch}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+  <view class="search-box" wx:if="{{searchHistory.length>0}}">
+    <view class="left-title">搜索历史</view>
+    <view class="search-content">
+      <text wx:for="{{searchHistory}}" wx:key="*this">{{item}}</text>
+    </view>
+    <view bindtap="clearStorage" class="clear-storage">
+      清除历史记录
+    </view>
+  </view>
+</view>
+<view class="container" wx:else>
+  <idot-cmp item="{{item}}" wx:for="{{searchResult}}" wx:key="id"></idot-cmp>
+  <view wx:if="{{noData}}">
+    <text>无数据</text>
+  </view>
+  <view wx:if="{{noMore}}">
+    <text class="no-more">～无更多数据～</text>
+  </view>
+</view>
+
+

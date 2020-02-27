@@ -1,0 +1,37 @@
+<!--pages/detail/detail.wxml-->
+<wxs src="../../utils/formatTime.wxs" module="tool"/>
+<view class="container" wx:for="{{articles}}" wx:key="title">
+  <text class="left-title">{{item.title}}</text>
+  <view class="article-content">{{item.content}}</view>
+</view>
+<view class="footer">
+  <button  class="btn" catchtap="showOther">
+    <image src="./images/other.png"></image>
+    <text class="text">其他</text>
+  </button>
+  <button class="btn" bindtap="makePhoneCall">
+    <image src="./images/phone.png"></image>
+    <text class="text">联系客服</text>
+  </button>
+  <button class="btn">
+    <image src="./images/remark.png"></image>
+    <text class="text">评价</text>
+  </button>
+  <button class="btn" open-type="share">
+    <image src="./images/share.png"></image>
+    <text class="text">分享</text>
+  </button>
+  <button class="btn" type="warn">
+    <text class="text">立即购买</text>
+  </button>
+</view>
+<view animation="{{animationData}}" class="other-modal" hidden="{{hideOtherModal}}">
+  <view class="other-title">
+    <text>请选择</text>
+    <icon type="clear" catchtap="hideOther"></icon>
+  </view>
+  <view catchtap="otherItemChoose" data-index="title" class="other-content" wx:key="title" wx:for="{{others}}">
+    <text>{{item.title}}</text>
+    <view>{{tool.formatTime(item.timeStamp)}}</view>
+  </view>
+</view>
